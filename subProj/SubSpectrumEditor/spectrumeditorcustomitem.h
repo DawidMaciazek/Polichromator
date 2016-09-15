@@ -3,6 +3,8 @@
 
 #include <QWidget>
 
+#include "expparser.h"
+
 namespace Ui {
 class SpectrumEditorCustomItem;
 }
@@ -22,6 +24,8 @@ private slots:
     void on_toolButton_clicked();
 
     void on_comboFunction_currentIndexChanged(const QString &arg1);
+
+    void functionUpdate(ExpParser parser);
 
 private:
     Ui::SpectrumEditorCustomItem *ui;

@@ -17,7 +17,7 @@
    <item>
     <widget class="QLabel" name="labelFunctionExp">
      <property name="text">
-      <string>f(x)=Aexp( - (x-μ)^2 / (2σ^2)  )</string>
+      <string>f(x) = A exp( - (x-μ)^2 / (2σ^2)  )</string>
      </property>
     </widget>
    </item>
@@ -36,7 +36,7 @@
      <item>
       <widget class="QLabel" name="label_3">
        <property name="text">
-        <string>μ</string>
+        <string>μ:</string>
        </property>
       </widget>
      </item>
@@ -46,7 +46,7 @@
      <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
-        <string>σ</string>
+        <string>σ:</string>
        </property>
       </widget>
      </item>

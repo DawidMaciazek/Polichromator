@@ -19,7 +19,9 @@ SOURCES += main.cpp\
     spectrumeditorcustomitem.cpp \
     spectrumeditorcustomgaussian.cpp \
     spectrumeditorcustomdelta.cpp \
-    spectrumeditorcustomcfunction.cpp
+    spectrumeditorcustomcfunction.cpp \
+    tinyexpr.c \
+    expparser.cpp
 
 HEADERS  += mainwindow.h \
     spectrumeditor.h \
@@ -27,7 +29,9 @@ HEADERS  += mainwindow.h \
     spectrumeditorcustomitem.h \
     spectrumeditorcustomgaussian.h \
     spectrumeditorcustomdelta.h \
-    spectrumeditorcustomcfunction.h
+    spectrumeditorcustomcfunction.h \
+    tinyexpr.h \
+    expparser.h
 
 FORMS    += mainwindow.ui \
     spectrumeditor.ui \

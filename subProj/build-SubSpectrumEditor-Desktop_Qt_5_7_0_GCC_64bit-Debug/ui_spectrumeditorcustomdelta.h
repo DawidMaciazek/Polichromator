@@ -92,9 +92,9 @@ public:
     {
         SpectrumEditorCustomDelta->setWindowTitle(QApplication::translate("SpectrumEditorCustomDelta", "Form", 0));
         labelFunctionExp->setText(QApplication::translate("SpectrumEditorCustomDelta", "Delta function", 0));
-        label_4->setText(QApplication::translate("SpectrumEditorCustomDelta", "A", 0));
-        label_3->setText(QApplication::translate("SpectrumEditorCustomDelta", "x0", 0));
-        label_2->setText(QApplication::translate("SpectrumEditorCustomDelta", "w", 0));
+        label_4->setText(QApplication::translate("SpectrumEditorCustomDelta", "A:", 0));
+        label_3->setText(QApplication::translate("SpectrumEditorCustomDelta", "x0:", 0));
+        label_2->setText(QApplication::translate("SpectrumEditorCustomDelta", "w:", 0));
     } // retranslateUi
 
 };

@@ -91,10 +91,10 @@ public:
     void retranslateUi(QWidget *SpectrumEditorCustomGaussian)
     {
         SpectrumEditorCustomGaussian->setWindowTitle(QApplication::translate("SpectrumEditorCustomGaussian", "Form", 0));
-        labelFunctionExp->setText(QApplication::translate("SpectrumEditorCustomGaussian", "f(x)=Aexp( - (x-\316\274)^2 / (2\317\203^2)  )", 0));
+        labelFunctionExp->setText(QApplication::translate("SpectrumEditorCustomGaussian", "f(x) = A exp( - (x-\316\274)^2 / (2\317\203^2)  )", 0));
         label_2->setText(QApplication::translate("SpectrumEditorCustomGaussian", "A:", 0));
-        label_3->setText(QApplication::translate("SpectrumEditorCustomGaussian", "\316\274", 0));
-        label_4->setText(QApplication::translate("SpectrumEditorCustomGaussian", "\317\203", 0));
+        label_3->setText(QApplication::translate("SpectrumEditorCustomGaussian", "\316\274:", 0));
+        label_4->setText(QApplication::translate("SpectrumEditorCustomGaussian", "\317\203:", 0));
     } // retranslateUi
 
 };

@@ -46,6 +46,9 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
     if(arg1 == functionList[0])
     {
         currentDisplay = new SpectrumEditorCustomGaussian(this);
+        connect(qobject_cast<SpectrumEditorCustomGaussian *>(currentDisplay),
+                SIGNAL(functionUpdateRequest(ExpParser)),
+                this, SLOT(functionUpdate(ExpParser)));
     }
     else if(arg1 == functionList[1])
     {
@@ -56,4 +59,13 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
         currentDisplay = new SpectrumEditorCustomCFunction(this);
     }
     ui->gridLayout->addWidget(currentDisplay, 0, layoutInsert);
+}
+
+void SpectrumEditorCustomItem::functionUpdate(ExpParser parser)
+{
+    qDebug() << "called!";
+    for(double i = 1 ; i < 6; i++)
+    {
+        qDebug() << "[" << i <<  "] = " << parser(i);
+    }
 }
