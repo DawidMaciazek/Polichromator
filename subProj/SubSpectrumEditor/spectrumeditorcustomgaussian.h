@@ -18,7 +18,7 @@ public:
     ~SpectrumEditorCustomGaussian();
 
 signals:
-    void functionUpdateRequest(ExpParser parser);
+    void functionUpdateRequest(ExpParser *parser);
 
 private slots:
     void on_lineAmplitude_textChanged(const QString &arg1);

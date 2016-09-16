@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <QLocale>
 #include "spectrumeditor.h"
 
 MainWindow::MainWindow(QWidget *parent) :

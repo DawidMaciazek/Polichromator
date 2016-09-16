@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SpectrumEditorCustomItem_t {
     QByteArrayData data[11];
-    char stringdata0[167];
+    char stringdata0[168];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -38,15 +38,15 @@ QT_MOC_LITERAL(5, 71, 21), // "on_toolButton_clicked"
 QT_MOC_LITERAL(6, 93, 36), // "on_comboFunction_currentIndex..."
 QT_MOC_LITERAL(7, 130, 4), // "arg1"
 QT_MOC_LITERAL(8, 135, 14), // "functionUpdate"
-QT_MOC_LITERAL(9, 150, 9), // "ExpParser"
-QT_MOC_LITERAL(10, 160, 6) // "parser"
+QT_MOC_LITERAL(9, 150, 10), // "ExpParser*"
+QT_MOC_LITERAL(10, 161, 6) // "parser"
 
     },
     "SpectrumEditorCustomItem\0deleteRequest\0"
     "\0SpectrumEditorCustomItem*\0item\0"
     "on_toolButton_clicked\0"
     "on_comboFunction_currentIndexChanged\0"
-    "arg1\0functionUpdate\0ExpParser\0parser"
+    "arg1\0functionUpdate\0ExpParser*\0parser"
 };
 #undef QT_MOC_LITERAL
 
@@ -91,7 +91,7 @@ void SpectrumEditorCustomItem::qt_static_metacall(QObject *_o, QMetaObject::Call
         case 0: _t->deleteRequest((*reinterpret_cast< SpectrumEditorCustomItem*(*)>(_a[1]))); break;
         case 1: _t->on_toolButton_clicked(); break;
         case 2: _t->on_comboFunction_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 3: _t->functionUpdate((*reinterpret_cast< ExpParser(*)>(_a[1]))); break;
+        case 3: _t->functionUpdate((*reinterpret_cast< ExpParser*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

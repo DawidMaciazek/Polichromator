@@ -14,6 +14,8 @@ public:
 
     double operator ()(double val);
 
+    int getError();
+
 private:
     int err;
     double x;

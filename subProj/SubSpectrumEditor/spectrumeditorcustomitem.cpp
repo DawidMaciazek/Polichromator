@@ -47,25 +47,30 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
     {
         currentDisplay = new SpectrumEditorCustomGaussian(this);
         connect(qobject_cast<SpectrumEditorCustomGaussian *>(currentDisplay),
-                SIGNAL(functionUpdateRequest(ExpParser)),
-                this, SLOT(functionUpdate(ExpParser)));
+                SIGNAL(functionUpdateRequest(ExpParser *)),
+                this, SLOT(functionUpdate(ExpParser *)));
     }
     else if(arg1 == functionList[1])
     {
         currentDisplay = new SpectrumEditorCustomDelta(this);
+
     }
     else
     {
         currentDisplay = new SpectrumEditorCustomCFunction(this);
+        connect(qobject_cast<SpectrumEditorCustomCFunction *>(currentDisplay),
+                SIGNAL(functionUpdateRequest(ExpParser *)),
+                this, SLOT(functionUpdate(ExpParser *)));
     }
     ui->gridLayout->addWidget(currentDisplay, 0, layoutInsert);
 }
 
-void SpectrumEditorCustomItem::functionUpdate(ExpParser parser)
+void SpectrumEditorCustomItem::functionUpdate(ExpParser *parser)
 {
     qDebug() << "called!";
     for(double i = 1 ; i < 6; i++)
     {
-        qDebug() << "[" << i <<  "] = " << parser(i);
+        qDebug() << "[" << i <<  "] = " << parser[0](i);
     }
+    delete parser;
 }

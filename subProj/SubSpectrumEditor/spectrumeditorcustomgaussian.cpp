@@ -2,13 +2,15 @@
 #include "ui_spectrumeditorcustomgaussian.h"
 
 #include <QDebug>
+#include <QDoubleValidator>
 
 SpectrumEditorCustomGaussian::SpectrumEditorCustomGaussian(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SpectrumEditorCustomGaussian)
 {
     ui->setupUi(this);
-    ui->lineAmplitude->setValidator( new QDoubleValidator(0.0, qInf(), 10, this) );
+
+    ui->lineAmplitude->setValidator( new QDoubleValidator(0, qInf(), 10, this) );
     ui->lineMu->setValidator( new QDoubleValidator(-qInf(), qInf(), 10, this) );
     ui->lineSigma->setValidator( new QDoubleValidator(0, qInf(), 10, this) );
 }
@@ -48,7 +50,7 @@ void SpectrumEditorCustomGaussian::validateInput()
     expression += ui->lineSigma->text();
     expression += QString("^2) )");
 
-    emit functionUpdateRequest(ExpParser(expression));
+    emit functionUpdateRequest(new ExpParser(expression));
     qDebug() << "all function validated ...";
     qDebug() << expression;
 }

@@ -41,7 +41,7 @@ public:
     {
         if (SpectrumEditorCustom->objectName().isEmpty())
             SpectrumEditorCustom->setObjectName(QStringLiteral("SpectrumEditorCustom"));
-        SpectrumEditorCustom->resize(828, 344);
+        SpectrumEditorCustom->resize(1099, 435);
         gridLayout = new QGridLayout(SpectrumEditorCustom);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         label = new QLabel(SpectrumEditorCustom);
@@ -71,7 +71,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 301, 324));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 572, 415));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         verticalLayoutFunctions = new QVBoxLayout();

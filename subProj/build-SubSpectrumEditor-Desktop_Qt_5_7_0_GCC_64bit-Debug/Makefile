@@ -914,6 +914,9 @@ moc_spectrumeditorcustom.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QWidge
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		../SubSpectrumEditor/spectrumeditorcustomitem.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		../SubSpectrumEditor/spectrumeditorcustom.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/subProj/SubSpectrumEditor -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../SubSpectrumEditor/spectrumeditorcustom.h -o moc_spectrumeditorcustom.cpp
@@ -1015,6 +1018,9 @@ moc_spectrumeditorcustomitem.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QW
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		../SubSpectrumEditor/spectrumeditorcustomitem.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/subProj/SubSpectrumEditor -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../SubSpectrumEditor/spectrumeditorcustomitem.h -o moc_spectrumeditorcustomitem.cpp
@@ -1116,6 +1122,9 @@ moc_spectrumeditorcustomgaussian.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidget
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		../SubSpectrumEditor/spectrumeditorcustomgaussian.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/subProj/SubSpectrumEditor -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../SubSpectrumEditor/spectrumeditorcustomgaussian.h -o moc_spectrumeditorcustomgaussian.cpp
@@ -1217,6 +1226,9 @@ moc_spectrumeditorcustomdelta.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/Q
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		../SubSpectrumEditor/spectrumeditorcustomdelta.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/subProj/SubSpectrumEditor -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../SubSpectrumEditor/spectrumeditorcustomdelta.h -o moc_spectrumeditorcustomdelta.cpp
@@ -1615,6 +1627,7 @@ mainwindow.o: ../SubSpectrumEditor/mainwindow.cpp ../SubSpectrumEditor/mainwindo
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QToolBar \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QWidget \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QLocale \
 		../SubSpectrumEditor/spectrumeditor.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../SubSpectrumEditor/mainwindow.cpp
 
@@ -1755,7 +1768,10 @@ spectrumeditor.o: ../SubSpectrumEditor/spectrumeditor.cpp ../SubSpectrumEditor/s
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
 		../SubSpectrumEditor/spectrumeditorcustom.h \
-		../SubSpectrumEditor/spectrumeditorcustomitem.h
+		../SubSpectrumEditor/spectrumeditorcustomitem.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o spectrumeditor.o ../SubSpectrumEditor/spectrumeditor.cpp
 
 spectrumeditorcustom.o: ../SubSpectrumEditor/spectrumeditorcustom.cpp ../SubSpectrumEditor/spectrumeditorcustom.h \
@@ -1857,6 +1873,9 @@ spectrumeditorcustom.o: ../SubSpectrumEditor/spectrumeditorcustom.cpp ../SubSpec
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		../SubSpectrumEditor/spectrumeditorcustomitem.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		ui_spectrumeditorcustom.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -2005,6 +2024,9 @@ spectrumeditorcustomitem.o: ../SubSpectrumEditor/spectrumeditorcustomitem.cpp ..
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		ui_spectrumeditorcustomitem.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -2153,6 +2175,9 @@ spectrumeditorcustomgaussian.o: ../SubSpectrumEditor/spectrumeditorcustomgaussia
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		ui_spectrumeditorcustomgaussian.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -2199,7 +2224,9 @@ spectrumeditorcustomgaussian.o: ../SubSpectrumEditor/spectrumeditorcustomgaussia
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpen.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../../../../Qt/5.7/gcc_64/include/QtGui/QDoubleValidator
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o spectrumeditorcustomgaussian.o ../SubSpectrumEditor/spectrumeditorcustomgaussian.cpp
 
 spectrumeditorcustomdelta.o: ../SubSpectrumEditor/spectrumeditorcustomdelta.cpp ../SubSpectrumEditor/spectrumeditorcustomdelta.h \
@@ -2300,6 +2327,9 @@ spectrumeditorcustomdelta.o: ../SubSpectrumEditor/spectrumeditorcustomdelta.cpp 
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../SubSpectrumEditor/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../SubSpectrumEditor/tinyexpr.h \
 		ui_spectrumeditorcustomdelta.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -2346,7 +2376,8 @@ spectrumeditorcustomdelta.o: ../SubSpectrumEditor/spectrumeditorcustomdelta.cpp 
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpen.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtextoption.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o spectrumeditorcustomdelta.o ../SubSpectrumEditor/spectrumeditorcustomdelta.cpp
 
 spectrumeditorcustomcfunction.o: ../SubSpectrumEditor/spectrumeditorcustomcfunction.cpp ../SubSpectrumEditor/spectrumeditorcustomcfunction.h \
@@ -2530,7 +2561,40 @@ expparser.o: ../SubSpectrumEditor/expparser.cpp ../SubSpectrumEditor/expparser.h
 		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
-		../SubSpectrumEditor/tinyexpr.h
+		../SubSpectrumEditor/tinyexpr.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qhash.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpair.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qregexp.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qmap.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qlocale.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvariant.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qset.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qsharedpointer_impl.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o expparser.o ../SubSpectrumEditor/expparser.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 

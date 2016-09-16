@@ -28,7 +28,7 @@ public:
     {
         if (SpectrumEditor->objectName().isEmpty())
             SpectrumEditor->setObjectName(QStringLiteral("SpectrumEditor"));
-        SpectrumEditor->resize(883, 421);
+        SpectrumEditor->resize(1363, 428);
         gridLayout = new QGridLayout(SpectrumEditor);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
 
