@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
 #include "qcustomplot.h"
 
@@ -25,6 +26,7 @@ class Ui_Dialog
 public:
     QVBoxLayout *verticalLayout;
     QCustomPlot *widget;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *Dialog)
     {
@@ -40,6 +42,11 @@ public:
 
         verticalLayout->addWidget(widget);
 
+        pushButton = new QPushButton(Dialog);
+        pushButton->setObjectName(QStringLiteral("pushButton"));
+
+        verticalLayout->addWidget(pushButton);
+
 
         retranslateUi(Dialog);
 
@@ -49,6 +56,7 @@ public:
     void retranslateUi(QDialog *Dialog)
     {
         Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
+        pushButton->setText(QApplication::translate("Dialog", "PushButton", 0));
     } // retranslateUi
 
 };

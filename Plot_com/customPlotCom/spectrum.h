@@ -12,8 +12,8 @@ public:
 
     Spectrum &operator =( const Spectrum &spec); // assigment constructor
     Spectrum &operator +=( const Spectrum spec);// addition assigment
+    Spectrum &operator *=( const Spectrum spec);// addition assigment
     Spectrum(const Spectrum& spec); // Copy constructor
-    //Spectrum operator +(Spectrum spec);
 
     //	R K::operator +(S b);
     ~Spectrum();

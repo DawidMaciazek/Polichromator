@@ -2236,7 +2236,10 @@ dialog.o: ../customPlotCom/dialog.cpp ../customPlotCom/dialog.h \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qprinterinfo.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QPair \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qprintpreviewwidget.h \
-		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qtprintsupportversion.h
+		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qtprintsupportversion.h \
+		../customPlotCom/spectrum.h \
+		../customPlotCom/expparser.h \
+		../customPlotCom/tinyexpr.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o dialog.o ../customPlotCom/dialog.cpp
 
 qcustomplot.o: ../customPlotCom/qcustomplot.cpp ../customPlotCom/qcustomplot.h \
@@ -2712,10 +2715,9 @@ qcustomplot.o: ../customPlotCom/qcustomplot.cpp ../customPlotCom/qcustomplot.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qcustomplot.o ../customPlotCom/qcustomplot.cpp
 
 spectrum.o: ../customPlotCom/spectrum.cpp ../customPlotCom/spectrum.h \
-		../customPlotCom/expparser.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qglobal.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qconfig.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
@@ -2738,24 +2740,28 @@ spectrum.o: ../customPlotCom/spectrum.cpp ../customPlotCom/spectrum.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmutex.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
-		../customPlotCom/tinyexpr.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qdebug.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qhash.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qpair.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qregexp.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		../customPlotCom/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../customPlotCom/tinyexpr.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qdebug.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qhash.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmap.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qtextstream.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
@@ -2771,8 +2777,6 @@ spectrum.o: ../customPlotCom/spectrum.cpp ../customPlotCom/spectrum.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qlocale.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qvariant.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qshareddata.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qset.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qcontiguouscache.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qsharedpointer.h \

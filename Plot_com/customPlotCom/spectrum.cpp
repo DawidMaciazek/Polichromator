@@ -16,14 +16,19 @@ Spectrum::Spectrum(double start, double stop, double step, bool inclusive):
         size = int( ceil((stop - start)/step) );
 
     x = QVector<double>(size);
+    //x.reserve(size);
+    qDebug() << "SIZE : " << size;
     double val=start;
-    for(int i; i<size; i++)
+    for(int i=0; i<size; i++)
     {
         x[i] = val;
         val+=step;
+        qDebug() << x[i];
     }
 
+    //
     y = QVector<double>(size);
+    //y.reserve(size);
 }
 
 Spectrum::Spectrum(ExpParser *parser, Spectrum &parent):
@@ -60,6 +65,14 @@ Spectrum &Spectrum::operator +=(const Spectrum spec)
     qDebug() << "+= OPERATOR!";
     for(int i=0; i<size; i++)
         y[i] = y.at(i) + spec.y.at(i);
+    return *this;
+}
+
+Spectrum &Spectrum::operator *=(const Spectrum spec)
+{
+    qDebug() << "+= OPERATOR!";
+    for(int i=0; i<size; i++)
+        y[i] = y.at(i) * spec.y.at(i);
     return *this;
 }
 
