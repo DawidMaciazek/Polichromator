@@ -14,9 +14,15 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         dialog.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    spectrum.cpp \
+    expparser.cpp \
+    tinyexpr.c
 
 HEADERS  += dialog.h \
-    qcustomplot.h
+    qcustomplot.h \
+    spectrum.h \
+    expparser.h \
+    tinyexpr.h
 
 FORMS    += dialog.ui
