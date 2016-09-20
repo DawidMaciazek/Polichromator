@@ -13,7 +13,7 @@ Dialog::Dialog(QWidget *parent) :
     ui(new Ui::Dialog)
 {
     ui->setupUi(this);
-    reduction = "*0,9";
+    reduction = "-1";
 
 
 }
@@ -35,9 +35,9 @@ void Dialog::on_pushButton_clicked()
     qDebug() << ui->widget->graphCount();
 
     ExpParser *gauss1 = new ExpParser("1,7*exp( -( (x-7)^2 / (1/2) ) )");
-    ExpParser *gauss2 = new ExpParser("1*exp( -( (x-5)^2 / (2*1*1) ) )" + reduction);
+    ExpParser *gauss2 = new ExpParser("1*exp( -( (x" + reduction + ")^2 / (2*1*1) ) )");
     ExpParser *gauss3 = new ExpParser("(  (1+(abs(x-1))/(x-1))*(1-(abs(x-1))/(x-1)  )  )/4");
-    reduction += "*0,9";
+    reduction += "-1";
 
     Spectrum sg1 = Spectrum(gauss1, basicSpectrum);
     Spectrum sg2 = Spectrum(gauss2, basicSpectrum);
@@ -46,7 +46,7 @@ void Dialog::on_pushButton_clicked()
 
     //sg1=sg2;
     Spectrum sg4=sg1;
-    sg4+=sg2;
+    sg4*=sg2;
     sg4+=sg3;
 
     //Spectrum sg3 = sg2;

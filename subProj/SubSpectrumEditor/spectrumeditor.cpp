@@ -3,13 +3,14 @@
 
 #include "spectrumeditorcustom.h"
 
-SpectrumEditor::SpectrumEditor(QWidget *parent) :
+SpectrumEditor::SpectrumEditor(Spectrum templateSpectrum, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::SpectrumEditor)
+    ui(new Ui::SpectrumEditor),
+    templateSpectrum(templateSpectrum)
 {
     ui->setupUi(this);
-    ui->gridLayout->addWidget(new SpectrumEditorCustom(this),0,0);
-    ui->gridLayout->addWidget(new SpectrumEditorCustom(this),1,0);
+    ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),0,0);
+    ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),1,0);
 }
 
 SpectrumEditor::~SpectrumEditor()

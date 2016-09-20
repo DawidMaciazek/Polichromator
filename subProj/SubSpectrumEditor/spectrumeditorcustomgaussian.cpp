@@ -51,6 +51,4 @@ void SpectrumEditorCustomGaussian::validateInput()
     expression += QString("^2) )");
 
     emit functionUpdateRequest(new ExpParser(expression));
-    qDebug() << "all function validated ...";
-    qDebug() << expression;
 }

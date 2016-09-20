@@ -6,7 +6,7 @@
 
 QT       += core gui
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
 
 TARGET = SubSpectrumEditor
 TEMPLATE = app
@@ -21,7 +21,9 @@ SOURCES += main.cpp\
     spectrumeditorcustomdelta.cpp \
     spectrumeditorcustomcfunction.cpp \
     tinyexpr.c \
-    expparser.cpp
+    expparser.cpp \
+    spectrum.cpp \
+    qcustomplot.cpp
 
 HEADERS  += mainwindow.h \
     spectrumeditor.h \
@@ -31,7 +33,9 @@ HEADERS  += mainwindow.h \
     spectrumeditorcustomdelta.h \
     spectrumeditorcustomcfunction.h \
     tinyexpr.h \
-    expparser.h
+    expparser.h \
+    spectrum.h \
+    qcustomplot.h
 
 FORMS    += mainwindow.ui \
     spectrumeditor.ui \

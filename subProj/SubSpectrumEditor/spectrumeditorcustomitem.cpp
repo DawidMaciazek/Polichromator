@@ -2,18 +2,23 @@
 #include "ui_spectrumeditorcustomitem.h"
 #include <QDebug>
 
+#include "spectrum.h"
 #include "spectrumeditorcustomgaussian.h"
 #include "spectrumeditorcustomdelta.h"
 #include "spectrumeditorcustomcfunction.h"
 
-SpectrumEditorCustomItem::SpectrumEditorCustomItem(QWidget *parent) :
+
+SpectrumEditorCustomItem::SpectrumEditorCustomItem(Spectrum templateSpectrum, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::SpectrumEditorCustomItem)
+    ui(new Ui::SpectrumEditorCustomItem),
+    templateSpectrum(templateSpectrum)
 {
     ui->setupUi(this);
 
+    spectrum = templateSpectrum;
+    spectrumIsCurrent = false;
     isInitialized = false;
-    layoutInsert = 1;
+    layoutInsertPosition = 1;
 
     functionList << "Gaussian" << "Delta" << "Custom";
     foreach (QString functionName, functionList) {
@@ -26,6 +31,11 @@ SpectrumEditorCustomItem::~SpectrumEditorCustomItem()
     delete ui;
 }
 
+Spectrum SpectrumEditorCustomItem::getSpectrum()
+{
+    return spectrum;
+}
+
 void SpectrumEditorCustomItem::on_toolButton_clicked()
 {
     emit deleteRequest(this);
@@ -33,6 +43,7 @@ void SpectrumEditorCustomItem::on_toolButton_clicked()
 
 void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QString &arg1)
 {
+    spectrumIsCurrent = false;
     if(isInitialized)
     {
        qDebug() << "removing";
@@ -48,7 +59,7 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
         currentDisplay = new SpectrumEditorCustomGaussian(this);
         connect(qobject_cast<SpectrumEditorCustomGaussian *>(currentDisplay),
                 SIGNAL(functionUpdateRequest(ExpParser *)),
-                this, SLOT(functionUpdate(ExpParser *)));
+                this, SLOT(functionUpdateSlot(ExpParser *)));
     }
     else if(arg1 == functionList[1])
     {
@@ -60,17 +71,16 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
         currentDisplay = new SpectrumEditorCustomCFunction(this);
         connect(qobject_cast<SpectrumEditorCustomCFunction *>(currentDisplay),
                 SIGNAL(functionUpdateRequest(ExpParser *)),
-                this, SLOT(functionUpdate(ExpParser *)));
+                this, SLOT(functionUpdateSlot(ExpParser *)));
     }
-    ui->gridLayout->addWidget(currentDisplay, 0, layoutInsert);
+    ui->gridLayout->addWidget(currentDisplay, 0, layoutInsertPosition);
 }
 
-void SpectrumEditorCustomItem::functionUpdate(ExpParser *parser)
+void SpectrumEditorCustomItem::functionUpdateSlot(ExpParser *parser)
 {
-    qDebug() << "called!";
-    for(double i = 1 ; i < 6; i++)
-    {
-        qDebug() << "[" << i <<  "] = " << parser[0](i);
-    }
+    spectrum = Spectrum(parser, templateSpectrum);
+    spectrumIsCurrent = true;
     delete parser;
+
+    emit updateRequest();
 }

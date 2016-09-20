@@ -16,11 +16,11 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QScrollArea>
 #include <QtWidgets/QToolButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -28,7 +28,7 @@ class Ui_SpectrumEditorCustom
 {
 public:
     QGridLayout *gridLayout;
-    QLabel *label;
+    QCustomPlot *plot;
     QVBoxLayout *verticalLayout;
     QComboBox *comboBox;
     QToolButton *buttonAddFunction;
@@ -44,11 +44,11 @@ public:
         SpectrumEditorCustom->resize(1099, 435);
         gridLayout = new QGridLayout(SpectrumEditorCustom);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label = new QLabel(SpectrumEditorCustom);
-        label->setObjectName(QStringLiteral("label"));
-        label->setMinimumSize(QSize(400, 0));
+        plot = new QCustomPlot(SpectrumEditorCustom);
+        plot->setObjectName(QStringLiteral("plot"));
+        plot->setMinimumSize(QSize(400, 0));
 
-        gridLayout->addWidget(label, 0, 0, 1, 1);
+        gridLayout->addWidget(plot, 0, 0, 1, 1);
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
@@ -92,7 +92,6 @@ public:
     void retranslateUi(QWidget *SpectrumEditorCustom)
     {
         SpectrumEditorCustom->setWindowTitle(QApplication::translate("SpectrumEditorCustom", "Form", 0));
-        label->setText(QApplication::translate("SpectrumEditorCustom", "PLOT HERE!", 0));
         buttonAddFunction->setText(QApplication::translate("SpectrumEditorCustom", "Add function", 0));
     } // retranslateUi
 

@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SpectrumEditorCustomItem_t {
-    QByteArrayData data[11];
-    char stringdata0[168];
+    QByteArrayData data[12];
+    char stringdata0[186];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,19 +34,21 @@ QT_MOC_LITERAL(1, 25, 13), // "deleteRequest"
 QT_MOC_LITERAL(2, 39, 0), // ""
 QT_MOC_LITERAL(3, 40, 25), // "SpectrumEditorCustomItem*"
 QT_MOC_LITERAL(4, 66, 4), // "item"
-QT_MOC_LITERAL(5, 71, 21), // "on_toolButton_clicked"
-QT_MOC_LITERAL(6, 93, 36), // "on_comboFunction_currentIndex..."
-QT_MOC_LITERAL(7, 130, 4), // "arg1"
-QT_MOC_LITERAL(8, 135, 14), // "functionUpdate"
-QT_MOC_LITERAL(9, 150, 10), // "ExpParser*"
-QT_MOC_LITERAL(10, 161, 6) // "parser"
+QT_MOC_LITERAL(5, 71, 13), // "updateRequest"
+QT_MOC_LITERAL(6, 85, 21), // "on_toolButton_clicked"
+QT_MOC_LITERAL(7, 107, 36), // "on_comboFunction_currentIndex..."
+QT_MOC_LITERAL(8, 144, 4), // "arg1"
+QT_MOC_LITERAL(9, 149, 18), // "functionUpdateSlot"
+QT_MOC_LITERAL(10, 168, 10), // "ExpParser*"
+QT_MOC_LITERAL(11, 179, 6) // "parser"
 
     },
     "SpectrumEditorCustomItem\0deleteRequest\0"
     "\0SpectrumEditorCustomItem*\0item\0"
-    "on_toolButton_clicked\0"
+    "updateRequest\0on_toolButton_clicked\0"
     "on_comboFunction_currentIndexChanged\0"
-    "arg1\0functionUpdate\0ExpParser*\0parser"
+    "arg1\0functionUpdateSlot\0ExpParser*\0"
+    "parser"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,28 +58,30 @@ static const uint qt_meta_data_SpectrumEditorCustomItem[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       1,       // signalCount
+       2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06 /* Public */,
+       1,    1,   39,    2, 0x06 /* Public */,
+       5,    0,   42,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   37,    2, 0x08 /* Private */,
-       6,    1,   38,    2, 0x08 /* Private */,
-       8,    1,   41,    2, 0x08 /* Private */,
+       6,    0,   43,    2, 0x08 /* Private */,
+       7,    1,   44,    2, 0x08 /* Private */,
+       9,    1,   47,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
+    QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    7,
-    QMetaType::Void, 0x80000000 | 9,   10,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, 0x80000000 | 10,   11,
 
        0        // eod
 };
@@ -89,9 +93,10 @@ void SpectrumEditorCustomItem::qt_static_metacall(QObject *_o, QMetaObject::Call
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->deleteRequest((*reinterpret_cast< SpectrumEditorCustomItem*(*)>(_a[1]))); break;
-        case 1: _t->on_toolButton_clicked(); break;
-        case 2: _t->on_comboFunction_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 3: _t->functionUpdate((*reinterpret_cast< ExpParser*(*)>(_a[1]))); break;
+        case 1: _t->updateRequest(); break;
+        case 2: _t->on_toolButton_clicked(); break;
+        case 3: _t->on_comboFunction_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 4: _t->functionUpdateSlot((*reinterpret_cast< ExpParser*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
@@ -112,6 +117,13 @@ void SpectrumEditorCustomItem::qt_static_metacall(QObject *_o, QMetaObject::Call
             typedef void (SpectrumEditorCustomItem::*_t)(SpectrumEditorCustomItem * );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SpectrumEditorCustomItem::deleteRequest)) {
                 *result = 0;
+                return;
+            }
+        }
+        {
+            typedef void (SpectrumEditorCustomItem::*_t)();
+            if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SpectrumEditorCustomItem::updateRequest)) {
+                *result = 1;
                 return;
             }
         }
@@ -143,13 +155,13 @@ int SpectrumEditorCustomItem::qt_metacall(QMetaObject::Call _c, int _id, void **
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }
@@ -159,5 +171,11 @@ void SpectrumEditorCustomItem::deleteRequest(SpectrumEditorCustomItem * _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void SpectrumEditorCustomItem::updateRequest()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, Q_NULLPTR);
 }
 QT_END_MOC_NAMESPACE
