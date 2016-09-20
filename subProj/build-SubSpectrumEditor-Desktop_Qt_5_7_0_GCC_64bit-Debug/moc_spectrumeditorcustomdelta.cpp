@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SpectrumEditorCustomDelta_t {
     QByteArrayData data[9];
-    char stringdata0[149];
+    char stringdata0[150];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,16 +32,16 @@ static const qt_meta_stringdata_SpectrumEditorCustomDelta_t qt_meta_stringdata_S
 QT_MOC_LITERAL(0, 0, 25), // "SpectrumEditorCustomDelta"
 QT_MOC_LITERAL(1, 26, 21), // "functionUpdateRequest"
 QT_MOC_LITERAL(2, 48, 0), // ""
-QT_MOC_LITERAL(3, 49, 9), // "ExpParser"
-QT_MOC_LITERAL(4, 59, 6), // "parser"
-QT_MOC_LITERAL(5, 66, 28), // "on_lineAmplitude_textChanged"
-QT_MOC_LITERAL(6, 95, 4), // "arg1"
-QT_MOC_LITERAL(7, 100, 24), // "on_lineStart_textChanged"
-QT_MOC_LITERAL(8, 125, 23) // "on_lineWidth_textEdited"
+QT_MOC_LITERAL(3, 49, 10), // "ExpParser*"
+QT_MOC_LITERAL(4, 60, 6), // "parser"
+QT_MOC_LITERAL(5, 67, 28), // "on_lineAmplitude_textChanged"
+QT_MOC_LITERAL(6, 96, 4), // "arg1"
+QT_MOC_LITERAL(7, 101, 24), // "on_lineStart_textChanged"
+QT_MOC_LITERAL(8, 126, 23) // "on_lineWidth_textEdited"
 
     },
     "SpectrumEditorCustomDelta\0"
-    "functionUpdateRequest\0\0ExpParser\0"
+    "functionUpdateRequest\0\0ExpParser*\0"
     "parser\0on_lineAmplitude_textChanged\0"
     "arg1\0on_lineStart_textChanged\0"
     "on_lineWidth_textEdited"
@@ -86,7 +86,7 @@ void SpectrumEditorCustomDelta::qt_static_metacall(QObject *_o, QMetaObject::Cal
         SpectrumEditorCustomDelta *_t = static_cast<SpectrumEditorCustomDelta *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->functionUpdateRequest((*reinterpret_cast< ExpParser(*)>(_a[1]))); break;
+        case 0: _t->functionUpdateRequest((*reinterpret_cast< ExpParser*(*)>(_a[1]))); break;
         case 1: _t->on_lineAmplitude_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 2: _t->on_lineStart_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 3: _t->on_lineWidth_textEdited((*reinterpret_cast< const QString(*)>(_a[1]))); break;
@@ -96,7 +96,7 @@ void SpectrumEditorCustomDelta::qt_static_metacall(QObject *_o, QMetaObject::Cal
         int *result = reinterpret_cast<int *>(_a[0]);
         void **func = reinterpret_cast<void **>(_a[1]);
         {
-            typedef void (SpectrumEditorCustomDelta::*_t)(ExpParser );
+            typedef void (SpectrumEditorCustomDelta::*_t)(ExpParser * );
             if (*reinterpret_cast<_t *>(func) == static_cast<_t>(&SpectrumEditorCustomDelta::functionUpdateRequest)) {
                 *result = 0;
                 return;
@@ -142,7 +142,7 @@ int SpectrumEditorCustomDelta::qt_metacall(QMetaObject::Call _c, int _id, void *
 }
 
 // SIGNAL 0
-void SpectrumEditorCustomDelta::functionUpdateRequest(ExpParser _t1)
+void SpectrumEditorCustomDelta::functionUpdateRequest(ExpParser * _t1)
 {
     void *_a[] = { Q_NULLPTR, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);

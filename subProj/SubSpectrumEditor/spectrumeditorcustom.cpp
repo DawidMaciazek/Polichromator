@@ -10,8 +10,13 @@ SpectrumEditorCustom::SpectrumEditorCustom(Spectrum templateSpectrum, QWidget *p
     ui(new Ui::SpectrumEditorCustom),
     templateSpectrum(templateSpectrum)
 {
+    qDebug() << "SpectrumEditorCustom" ;
     ui->setupUi(this);
+
     initializePlot();
+
+    ui->comboMerge->addItem("Addition");
+    ui->comboMerge->addItem("Multiplication");
 }
 
 SpectrumEditorCustom::~SpectrumEditorCustom()
@@ -48,7 +53,15 @@ void SpectrumEditorCustom::updatePlot()
             }
             else
             {
-                combindeSpectrum += spectrum;
+                int currentIndex = ui->comboMerge->currentIndex();
+                if(currentIndex == 0)
+                {
+                    combindeSpectrum += spectrum;
+                }
+                else
+                {
+                    combindeSpectrum *= spectrum;
+                }
             }
             itemCnt++;
         }
@@ -94,5 +107,11 @@ void SpectrumEditorCustom::deleteItemSlot(SpectrumEditorCustomItem *item)
 void SpectrumEditorCustom::updatePlotSlot()
 {
     qDebug() << "plot update request catched...";
+    updatePlot();
+}
+
+void SpectrumEditorCustom::on_comboMerge_currentIndexChanged(int index)
+{
+    qDebug() << "current CHANGEDDD";
     updatePlot();
 }

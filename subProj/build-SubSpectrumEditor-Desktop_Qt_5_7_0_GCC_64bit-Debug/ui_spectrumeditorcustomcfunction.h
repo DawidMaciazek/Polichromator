@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
+#include <QtWidgets/QToolButton>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -26,7 +27,9 @@ class Ui_SpectrumEditorCustomCFunction
 {
 public:
     QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout_2;
     QLabel *labelFunctionExp;
+    QToolButton *buttonHelp;
     QHBoxLayout *horizontalLayout;
     QLabel *label_2;
     QLineEdit *lineFunctionExp;
@@ -38,10 +41,20 @@ public:
         SpectrumEditorCustomCFunction->resize(400, 64);
         verticalLayout = new QVBoxLayout(SpectrumEditorCustomCFunction);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         labelFunctionExp = new QLabel(SpectrumEditorCustomCFunction);
         labelFunctionExp->setObjectName(QStringLiteral("labelFunctionExp"));
 
-        verticalLayout->addWidget(labelFunctionExp);
+        horizontalLayout_2->addWidget(labelFunctionExp);
+
+        buttonHelp = new QToolButton(SpectrumEditorCustomCFunction);
+        buttonHelp->setObjectName(QStringLiteral("buttonHelp"));
+
+        horizontalLayout_2->addWidget(buttonHelp);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -68,6 +81,7 @@ public:
     {
         SpectrumEditorCustomCFunction->setWindowTitle(QApplication::translate("SpectrumEditorCustomCFunction", "Form", 0));
         labelFunctionExp->setText(QApplication::translate("SpectrumEditorCustomCFunction", "TextLabel", 0));
+        buttonHelp->setText(QApplication::translate("SpectrumEditorCustomCFunction", "?", 0));
         label_2->setText(QApplication::translate("SpectrumEditorCustomCFunction", "f(x)", 0));
     } // retranslateUi
 

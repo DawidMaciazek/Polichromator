@@ -27,6 +27,8 @@ private slots:
     void deleteItemSlot(SpectrumEditorCustomItem *item);
     void updatePlotSlot();
 
+    void on_comboMerge_currentIndexChanged(int index);
+
 private:
     Ui::SpectrumEditorCustom *ui;
 

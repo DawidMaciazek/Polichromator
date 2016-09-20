@@ -27,18 +27,24 @@ SpectrumEditorCustomGaussian::~SpectrumEditorCustomGaussian()
 void SpectrumEditorCustomGaussian::on_lineAmplitude_textChanged(const QString &arg1)
 {
     amplitudeFlag = true;
+    if(arg1.isEmpty())
+        amplitudeFlag = false;
     validateInput();
 }
 
 void SpectrumEditorCustomGaussian::on_lineMu_textChanged(const QString &arg1)
 {
     muFlag = true;
+    if(arg1.isEmpty())
+        muFlag = false;
     validateInput();
 }
 
 void SpectrumEditorCustomGaussian::on_lineSigma_textChanged(const QString &arg1)
 {
     sigmaFlag = true;
+    if(arg1.isEmpty())
+        sigmaFlag = false;
     validateInput();
 }
 

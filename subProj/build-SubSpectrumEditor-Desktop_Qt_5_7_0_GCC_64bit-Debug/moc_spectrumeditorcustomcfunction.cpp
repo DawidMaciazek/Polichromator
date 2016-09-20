@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_SpectrumEditorCustomCFunction_t {
-    QByteArrayData data[6];
-    char stringdata0[106];
+    QByteArrayData data[7];
+    char stringdata0[128];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,12 +34,14 @@ QT_MOC_LITERAL(1, 30, 21), // "functionUpdateRequest"
 QT_MOC_LITERAL(2, 52, 0), // ""
 QT_MOC_LITERAL(3, 53, 10), // "ExpParser*"
 QT_MOC_LITERAL(4, 64, 6), // "parser"
-QT_MOC_LITERAL(5, 71, 34) // "on_lineFunctionExp_editingFin..."
+QT_MOC_LITERAL(5, 71, 34), // "on_lineFunctionExp_editingFin..."
+QT_MOC_LITERAL(6, 106, 21) // "on_buttonHelp_clicked"
 
     },
     "SpectrumEditorCustomCFunction\0"
     "functionUpdateRequest\0\0ExpParser*\0"
-    "parser\0on_lineFunctionExp_editingFinished"
+    "parser\0on_lineFunctionExp_editingFinished\0"
+    "on_buttonHelp_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -49,7 +51,7 @@ static const uint qt_meta_data_SpectrumEditorCustomCFunction[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -57,15 +59,17 @@ static const uint qt_meta_data_SpectrumEditorCustomCFunction[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06 /* Public */,
+       1,    1,   29,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   27,    2, 0x08 /* Private */,
+       5,    0,   32,    2, 0x08 /* Private */,
+       6,    0,   33,    2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -79,6 +83,7 @@ void SpectrumEditorCustomCFunction::qt_static_metacall(QObject *_o, QMetaObject:
         switch (_id) {
         case 0: _t->functionUpdateRequest((*reinterpret_cast< ExpParser*(*)>(_a[1]))); break;
         case 1: _t->on_lineFunctionExp_editingFinished(); break;
+        case 2: _t->on_buttonHelp_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -119,13 +124,13 @@ int SpectrumEditorCustomCFunction::qt_metacall(QMetaObject::Call _c, int _id, vo
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 2)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 2;
+        _id -= 3;
     }
     return _id;
 }

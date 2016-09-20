@@ -27,7 +27,7 @@
    <item row="0" column="2">
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QComboBox" name="comboBox"/>
+      <widget class="QComboBox" name="comboMerge"/>
      </item>
      <item>
       <widget class="QToolButton" name="buttonAddFunction">

@@ -10,7 +10,7 @@ SpectrumEditor::SpectrumEditor(Spectrum templateSpectrum, QWidget *parent) :
 {
     ui->setupUi(this);
     ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),0,0);
-    ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),1,0);
+    //ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),1,0);
 }
 
 SpectrumEditor::~SpectrumEditor()
