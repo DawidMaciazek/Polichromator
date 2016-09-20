@@ -23,6 +23,8 @@ signals:
 private slots:
     void on_lineFunctionExp_editingFinished();
 
+    void on_buttonHelp_clicked();
+
 private:
     Ui::SpectrumEditorCustomCFunction *ui;
 };

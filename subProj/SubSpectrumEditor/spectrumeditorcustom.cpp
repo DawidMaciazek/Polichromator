@@ -32,13 +32,32 @@ void SpectrumEditorCustom::updatePlot()
 {
     ui->plot->clearGraphs();
     QList<SpectrumEditorCustomItem *> itemList = this->findChildren<SpectrumEditorCustomItem *>();
+
+    Spectrum combindeSpectrum;
     int itemCnt = 0;
     foreach (SpectrumEditorCustomItem *item, itemList) {
         Spectrum spectrum = item->getSpectrum();
+        if(spectrum.valid)
+        {
+            ui->plot->addGraph();
+            ui->plot->graph(itemCnt)->setData(spectrum.x, spectrum.y);
+
+            if(itemCnt == 0)
+            {
+                combindeSpectrum = spectrum;
+            }
+            else
+            {
+                combindeSpectrum += spectrum;
+            }
+            itemCnt++;
+        }
+    }
+    if(itemCnt > 0)
+    {
         ui->plot->addGraph();
-        ui->plot->graph(itemCnt)->setData(spectrum.x, spectrum.y);
-        itemCnt++;
-        qDebug() << "GRAPH ADDED!";
+        ui->plot->graph(itemCnt)->setData(combindeSpectrum.x, combindeSpectrum.y);
+        ui->plot->graph(itemCnt)->setPen(QPen(Qt::red));
     }
     ui->plot->replot();
 }

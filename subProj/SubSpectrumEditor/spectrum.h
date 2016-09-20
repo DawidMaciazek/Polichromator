@@ -19,6 +19,7 @@ public:
     //	R K::operator +(S b);
     ~Spectrum();
 
+    bool valid;
     double start;
     double stop;
     double step;

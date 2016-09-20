@@ -10,6 +10,10 @@ SpectrumEditorCustomGaussian::SpectrumEditorCustomGaussian(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    amplitudeFlag = false;
+    muFlag = false;
+    sigmaFlag = false;
+
     ui->lineAmplitude->setValidator( new QDoubleValidator(0, qInf(), 10, this) );
     ui->lineMu->setValidator( new QDoubleValidator(-qInf(), qInf(), 10, this) );
     ui->lineSigma->setValidator( new QDoubleValidator(0, qInf(), 10, this) );

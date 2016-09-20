@@ -7,13 +7,13 @@
 
 Spectrum::Spectrum()
 {
-    qDebug() << "WHY YOU ARE USING MEEEEE!";
 }
 
 Spectrum::Spectrum(double start, double stop, double step, bool inclusive):
     start(start),
     stop(stop),
-    step(step)
+    step(step),
+    valid(false)
 {
     if(inclusive)
         size = int( ceil((stop - start)/step)+ 1 );
@@ -40,15 +40,23 @@ Spectrum::Spectrum(ExpParser *parser, Spectrum &parent):
     x = parent.x;
     y = QVector<double>(size);
 
+    if(parser->getError())
+    {
+        valid = false;
+        return;
+    }
+
     for(int i=0; i<size; i++)
     {
         y[i] = parser[0]( x.at(i) );
     }
+    valid = true;
 }
 
 Spectrum &Spectrum::operator =(const Spectrum &spec)
 {
     qDebug() << "= OPERATOR!"    ;
+    valid = spec.valid;
     start = spec.start;
     stop = spec.stop;
     step = spec.step;
@@ -62,6 +70,7 @@ Spectrum &Spectrum::operator =(const Spectrum &spec)
 Spectrum &Spectrum::operator +=(const Spectrum spec)
 {
     qDebug() << "+= OPERATOR!";
+    valid = (spec.valid && valid);
     for(int i=0; i<size; i++)
         y[i] = y.at(i) + spec.y.at(i);
     return *this;
@@ -70,6 +79,7 @@ Spectrum &Spectrum::operator +=(const Spectrum spec)
 Spectrum &Spectrum::operator *=(const Spectrum spec)
 {
     qDebug() << "+= OPERATOR!";
+    valid = (spec.valid && valid);
     for(int i=0; i<size; i++)
         y[i] = y.at(i) * spec.y.at(i);
     return *this;
@@ -79,6 +89,7 @@ Spectrum &Spectrum::operator *=(const Spectrum spec)
 Spectrum::Spectrum(const Spectrum &spec)
 {
     qDebug() << "copy CONSTRUCTOR";
+    valid = spec.valid;
     start = spec.start;
     stop = spec.stop;
     step = spec.step;

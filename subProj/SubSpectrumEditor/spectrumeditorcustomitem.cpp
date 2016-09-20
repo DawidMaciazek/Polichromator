@@ -33,11 +33,17 @@ SpectrumEditorCustomItem::~SpectrumEditorCustomItem()
 
 Spectrum SpectrumEditorCustomItem::getSpectrum()
 {
+    if(!spectrumIsCurrent)
+        spectrum.valid = false;
+    else
+        spectrum.valid = true;
+
     return spectrum;
 }
 
 void SpectrumEditorCustomItem::on_toolButton_clicked()
 {
+    spectrumIsCurrent = false;
     emit deleteRequest(this);
 }
 
@@ -46,8 +52,9 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
     spectrumIsCurrent = false;
     if(isInitialized)
     {
-       qDebug() << "removing";
        currentDisplay->deleteLater();
+       spectrumIsCurrent = false;
+       emit updateRequest();
     }
     else
     {
@@ -64,7 +71,9 @@ void SpectrumEditorCustomItem::on_comboFunction_currentIndexChanged(const QStrin
     else if(arg1 == functionList[1])
     {
         currentDisplay = new SpectrumEditorCustomDelta(this);
-
+        connect(qobject_cast<SpectrumEditorCustomDelta *>(currentDisplay),
+                SIGNAL(functionUpdateRequest(ExpParser*)),
+                this, SLOT(functionUpdateSlot(ExpParser*)));
     }
     else
     {

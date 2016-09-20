@@ -1,6 +1,7 @@
 #include "spectrumeditorcustomcfunction.h"
 #include "ui_spectrumeditorcustomcfunction.h"
 
+#include <QMessageBox>
 #include <QDebug>
 
 SpectrumEditorCustomCFunction::SpectrumEditorCustomCFunction(QWidget *parent) :
@@ -43,4 +44,27 @@ void SpectrumEditorCustomCFunction::on_lineFunctionExp_editingFinished()
 
     ui->labelFunctionExp->setText(labelText);
     emit functionUpdateRequest(parser);
+}
+
+void SpectrumEditorCustomCFunction::on_buttonHelp_clicked()
+{
+    QMessageBox  msgBox;
+    QString msg = "";
+    msg += "Valid input examples:\n";
+    msg += "  exp(x+10)/2\n";
+    msg += "  ((x+x^2)-2)/33\n";
+    msg += "  (1+(abs(x-4)/(x-4)))/2\n";
+
+
+    msg += "\n\n";
+    msg += "Available functions: \n";
+    msg += "  sin(), cos(), tan(), asin(), acos(), atan(), atan2(), sinh(), tanh()\n";
+    msg += "  abs(), ceil(), floor()\n";
+    msg += "  exp(), ln(), log(), log10(), pow()";
+
+    msg += "\n\nAvailable mathematical constants: \n";
+    msg += "  e, pi";
+
+    msgBox.setText(msg);
+    msgBox.exec();
 }
