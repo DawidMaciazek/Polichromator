@@ -2,18 +2,26 @@
 #include "ui_spectrumeditor.h"
 
 #include "spectrumeditorcustom.h"
+#include <spectrum.h>
 
-SpectrumEditor::SpectrumEditor(Spectrum templateSpectrum, QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::SpectrumEditor),
-    templateSpectrum(templateSpectrum)
+#include <QDebug>
+
+SpectrumEditor::SpectrumEditor(QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::SpectrumEditor)
 {
     ui->setupUi(this);
-    ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),0,0);
-    //ui->gridLayout->addWidget(new SpectrumEditorCustom(templateSpectrum, this),1,0);
+    spectrumEditor = new SpectrumEditorCustom(Spectrum(10,100,1), this);
+    ui->gridLayout->addWidget(spectrumEditor,0,0);
 }
 
 SpectrumEditor::~SpectrumEditor()
 {
     delete ui;
+}
+
+Spectrum SpectrumEditor::getSpectrum()
+{
+    qDebug() << "return spectrummm";
+    return spectrumEditor->combinedSpectrum;
 }

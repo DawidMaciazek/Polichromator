@@ -30,7 +30,7 @@ public:
     QGridLayout *gridLayout;
     QCustomPlot *plot;
     QVBoxLayout *verticalLayout;
-    QComboBox *comboBox;
+    QComboBox *comboMerge;
     QToolButton *buttonAddFunction;
     QScrollArea *scrollArea;
     QWidget *scrollAreaWidgetContents;
@@ -52,10 +52,10 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        comboBox = new QComboBox(SpectrumEditorCustom);
-        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboMerge = new QComboBox(SpectrumEditorCustom);
+        comboMerge->setObjectName(QStringLiteral("comboMerge"));
 
-        verticalLayout->addWidget(comboBox);
+        verticalLayout->addWidget(comboMerge);
 
         buttonAddFunction = new QToolButton(SpectrumEditorCustom);
         buttonAddFunction->setObjectName(QStringLiteral("buttonAddFunction"));

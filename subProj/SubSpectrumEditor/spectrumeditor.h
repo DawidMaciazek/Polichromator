@@ -1,25 +1,28 @@
 #ifndef SPECTRUMEDITOR_H
 #define SPECTRUMEDITOR_H
 
-#include <QWidget>
+#include <QDialog>
 
+#include "spectrumeditorcustom.h"
 #include "spectrum.h"
 
 namespace Ui {
 class SpectrumEditor;
 }
 
-class SpectrumEditor : public QWidget
+class SpectrumEditor : public QDialog
 {
     Q_OBJECT
 
 public:
-    explicit SpectrumEditor(Spectrum templateSpectrum,  QWidget *parent = 0);
+    explicit SpectrumEditor(QWidget *parent = 0);
     ~SpectrumEditor();
+    Spectrum getSpectrum();
 
 private:
     Ui::SpectrumEditor *ui;
-    Spectrum templateSpectrum;
+
+    SpectrumEditorCustom *spectrumEditor;
 };
 
 #endif // SPECTRUMEDITOR_H

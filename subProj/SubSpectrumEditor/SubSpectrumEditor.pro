@@ -14,7 +14,6 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    spectrumeditor.cpp \
     spectrumeditorcustom.cpp \
     spectrumeditorcustomitem.cpp \
     spectrumeditorcustomgaussian.cpp \
@@ -23,10 +22,10 @@ SOURCES += main.cpp\
     tinyexpr.c \
     expparser.cpp \
     spectrum.cpp \
-    qcustomplot.cpp
+    qcustomplot.cpp \
+    spectrumeditor.cpp
 
 HEADERS  += mainwindow.h \
-    spectrumeditor.h \
     spectrumeditorcustom.h \
     spectrumeditorcustomitem.h \
     spectrumeditorcustomgaussian.h \
@@ -35,12 +34,13 @@ HEADERS  += mainwindow.h \
     tinyexpr.h \
     expparser.h \
     spectrum.h \
-    qcustomplot.h
+    qcustomplot.h \
+    spectrumeditor.h
 
 FORMS    += mainwindow.ui \
-    spectrumeditor.ui \
     spectrumeditorcustom.ui \
     spectrumeditorcustomitem.ui \
     spectrumeditorcustomgaussian.ui \
     spectrumeditorcustomdelta.ui \
-    spectrumeditorcustomcfunction.ui
+    spectrumeditorcustomcfunction.ui \
+    spectrumeditor.ui

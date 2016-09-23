@@ -8,7 +8,8 @@
 SpectrumEditorCustom::SpectrumEditorCustom(Spectrum templateSpectrum, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::SpectrumEditorCustom),
-    templateSpectrum(templateSpectrum)
+    templateSpectrum(templateSpectrum),
+    combinedSpectrum(templateSpectrum)
 {
     qDebug() << "SpectrumEditorCustom" ;
     ui->setupUi(this);
@@ -38,7 +39,7 @@ void SpectrumEditorCustom::updatePlot()
     ui->plot->clearGraphs();
     QList<SpectrumEditorCustomItem *> itemList = this->findChildren<SpectrumEditorCustomItem *>();
 
-    Spectrum combindeSpectrum;
+    combinedSpectrum = templateSpectrum;
     int itemCnt = 0;
     foreach (SpectrumEditorCustomItem *item, itemList) {
         Spectrum spectrum = item->getSpectrum();
@@ -49,18 +50,18 @@ void SpectrumEditorCustom::updatePlot()
 
             if(itemCnt == 0)
             {
-                combindeSpectrum = spectrum;
+                combinedSpectrum = spectrum;
             }
             else
             {
                 int currentIndex = ui->comboMerge->currentIndex();
                 if(currentIndex == 0)
                 {
-                    combindeSpectrum += spectrum;
+                    combinedSpectrum += spectrum;
                 }
                 else
                 {
-                    combindeSpectrum *= spectrum;
+                    combinedSpectrum *= spectrum;
                 }
             }
             itemCnt++;
@@ -69,7 +70,7 @@ void SpectrumEditorCustom::updatePlot()
     if(itemCnt > 0)
     {
         ui->plot->addGraph();
-        ui->plot->graph(itemCnt)->setData(combindeSpectrum.x, combindeSpectrum.y);
+        ui->plot->graph(itemCnt)->setData(combinedSpectrum.x, combinedSpectrum.y);
         ui->plot->graph(itemCnt)->setPen(QPen(Qt::red));
     }
     ui->plot->replot();

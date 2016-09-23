@@ -21,6 +21,7 @@ public:
 
     void initializePlot();
     void updatePlot();
+    Spectrum combinedSpectrum;
 
 private slots:
     void on_buttonAddFunction_clicked();

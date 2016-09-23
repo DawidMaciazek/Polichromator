@@ -1,21 +1,21 @@
 /********************************************************************************
-** Form generated from reading UI file 'spectrumeditor.ui'
+** Form generated from reading UI file 'spectrumeditorWIDGET.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.7.0
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
 
-#ifndef UI_SPECTRUMEDITOR_H
-#define UI_SPECTRUMEDITOR_H
+#ifndef UI_SPECTRUMEDITORWIDGET_H
+#define UI_SPECTRUMEDITORWIDGET_H
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,11 +24,11 @@ class Ui_SpectrumEditor
 public:
     QGridLayout *gridLayout;
 
-    void setupUi(QDialog *SpectrumEditor)
+    void setupUi(QWidget *SpectrumEditor)
     {
         if (SpectrumEditor->objectName().isEmpty())
             SpectrumEditor->setObjectName(QStringLiteral("SpectrumEditor"));
-        SpectrumEditor->resize(400, 300);
+        SpectrumEditor->resize(1363, 428);
         gridLayout = new QGridLayout(SpectrumEditor);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
 
@@ -37,9 +37,9 @@ public:
         QMetaObject::connectSlotsByName(SpectrumEditor);
     } // setupUi
 
-    void retranslateUi(QDialog *SpectrumEditor)
+    void retranslateUi(QWidget *SpectrumEditor)
     {
-        SpectrumEditor->setWindowTitle(QApplication::translate("SpectrumEditor", "Dialog", 0));
+        SpectrumEditor->setWindowTitle(QApplication::translate("SpectrumEditor", "Form", 0));
     } // retranslateUi
 
 };
@@ -50,4 +50,4 @@ namespace Ui {
 
 QT_END_NAMESPACE
 
-#endif // UI_SPECTRUMEDITOR_H
+#endif // UI_SPECTRUMEDITORWIDGET_H
