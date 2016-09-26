@@ -46,7 +46,11 @@ void SpectrumEditorCustomDelta::validateInput()
     if( ! (amplitudeFlag && startFlag && widthFlag) )
         return;
 
-    QString expression = QString("(%1/4)*( (1+abs(x-%2)/(x-%2)) * (1-abs(x-%2-%3)/(x-%2-%3)) )").arg(
+    //QString expression = QString("(%1/4)*( (1+abs(x-%2)/(x-%2)) * (1-abs(x-%2-%3)/(x-%2-%3)) )").arg(
+    //            ui->lineAmplitude->text(),
+    //            ui->lineStart->text(),
+    //            ui->lineWidth->text());
+    QString expression = QString("%1*floor(1,99999*exp(-((x-%2-(%3/2))^2)/(2*(%3/2,3548)^2)))").arg(
                 ui->lineAmplitude->text(),
                 ui->lineStart->text(),
                 ui->lineWidth->text());

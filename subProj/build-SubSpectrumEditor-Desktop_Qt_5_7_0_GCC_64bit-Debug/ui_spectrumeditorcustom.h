@@ -46,7 +46,7 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         plot = new QCustomPlot(SpectrumEditorCustom);
         plot->setObjectName(QStringLiteral("plot"));
-        plot->setMinimumSize(QSize(400, 0));
+        plot->setMinimumSize(QSize(500, 0));
 
         gridLayout->addWidget(plot, 0, 0, 1, 1);
 
@@ -71,7 +71,7 @@ public:
         scrollArea->setWidgetResizable(true);
         scrollAreaWidgetContents = new QWidget();
         scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
-        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 572, 415));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 472, 415));
         gridLayout_2 = new QGridLayout(scrollAreaWidgetContents);
         gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
         verticalLayoutFunctions = new QVBoxLayout();

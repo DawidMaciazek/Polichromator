@@ -13,9 +13,9 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QDialog>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,11 +24,11 @@ class Ui_SpectrumEditor
 public:
     QGridLayout *gridLayout;
 
-    void setupUi(QWidget *SpectrumEditor)
+    void setupUi(QDialog *SpectrumEditor)
     {
         if (SpectrumEditor->objectName().isEmpty())
             SpectrumEditor->setObjectName(QStringLiteral("SpectrumEditor"));
-        SpectrumEditor->resize(1363, 428);
+        SpectrumEditor->resize(400, 300);
         gridLayout = new QGridLayout(SpectrumEditor);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
 
@@ -37,9 +37,9 @@ public:
         QMetaObject::connectSlotsByName(SpectrumEditor);
     } // setupUi
 
-    void retranslateUi(QWidget *SpectrumEditor)
+    void retranslateUi(QDialog *SpectrumEditor)
     {
-        SpectrumEditor->setWindowTitle(QApplication::translate("SpectrumEditor", "Form", 0));
+        SpectrumEditor->setWindowTitle(QApplication::translate("SpectrumEditor", "Dialog", 0));
     } // retranslateUi
 
 };
