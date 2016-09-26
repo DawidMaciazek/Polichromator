@@ -11,6 +11,8 @@ public:
     Spectrum(double start, double stop, double step, bool inclusive = true);
     Spectrum(ExpParser *parser, Spectrum &parent);
 
+    Spectrum &envelope(const Spectrum spec);
+
     Spectrum &operator =( const Spectrum &spec); // assigment constructor
     Spectrum &operator +=( const Spectrum spec);// addition assigment
     Spectrum &operator *=( const Spectrum spec);// addition assigment

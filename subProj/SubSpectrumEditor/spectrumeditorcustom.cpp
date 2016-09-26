@@ -16,6 +16,7 @@ SpectrumEditorCustom::SpectrumEditorCustom(Spectrum templateSpectrum, QWidget *p
 
     initializePlot();
 
+    ui->comboMerge->addItem("Envelope");
     ui->comboMerge->addItem("Addition");
     ui->comboMerge->addItem("Multiplication");
 }
@@ -56,6 +57,10 @@ void SpectrumEditorCustom::updatePlot()
             {
                 int currentIndex = ui->comboMerge->currentIndex();
                 if(currentIndex == 0)
+                {
+                    combinedSpectrum.envelope(spectrum);
+                }
+                else if(currentIndex == 1)
                 {
                     combinedSpectrum += spectrum;
                 }

@@ -53,6 +53,16 @@ Spectrum::Spectrum(ExpParser *parser, Spectrum &parent):
     valid = true;
 }
 
+Spectrum &Spectrum::envelope(const Spectrum spec)
+{
+    qDebug() << "envelope OPERATOR";
+    for(int i=0; i<size; i++)
+    {
+        y[i] = std::max(y.at(i), spec.y.at(i));
+    }
+    return *this;
+}
+
 Spectrum &Spectrum::operator =(const Spectrum &spec)
 {
     qDebug() << "= OPERATOR!"    ;
