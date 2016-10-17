@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QCustomPlot" name="widget" native="true"/>
+    <widget class="QCustomPlot" name="widget_n" native="true"/>
    </item>
    <item>
     <widget class="QPushButton" name="pushButton">
@@ -23,6 +23,9 @@
       <string>PushButton</string>
      </property>
     </widget>
+   </item>
+   <item>
+    <widget class="MyCustomPlot" name="widget" native="true"/>
    </item>
   </layout>
  </widget>
@@ -32,6 +35,12 @@
    <class>QCustomPlot</class>
    <extends>QWidget</extends>
    <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>mycustomplot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

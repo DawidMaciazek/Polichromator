@@ -17,12 +17,14 @@ SOURCES += main.cpp\
     qcustomplot.cpp \
     spectrum.cpp \
     expparser.cpp \
-    tinyexpr.c
+    tinyexpr.c \
+    mycustomplot.cpp
 
 HEADERS  += dialog.h \
     qcustomplot.h \
     spectrum.h \
     expparser.h \
-    tinyexpr.h
+    tinyexpr.h \
+    mycustomplot.h
 
 FORMS    += dialog.ui

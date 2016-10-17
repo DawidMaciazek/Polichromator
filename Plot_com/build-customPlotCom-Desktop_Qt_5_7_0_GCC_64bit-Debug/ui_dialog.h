@@ -17,6 +17,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QVBoxLayout>
+#include "mycustomplot.h"
 #include "qcustomplot.h"
 
 QT_BEGIN_NAMESPACE
@@ -25,8 +26,9 @@ class Ui_Dialog
 {
 public:
     QVBoxLayout *verticalLayout;
-    QCustomPlot *widget;
+    QCustomPlot *widget_n;
     QPushButton *pushButton;
+    MyCustomPlot *widget;
 
     void setupUi(QDialog *Dialog)
     {
@@ -37,15 +39,20 @@ public:
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        widget = new QCustomPlot(Dialog);
-        widget->setObjectName(QStringLiteral("widget"));
+        widget_n = new QCustomPlot(Dialog);
+        widget_n->setObjectName(QStringLiteral("widget_n"));
 
-        verticalLayout->addWidget(widget);
+        verticalLayout->addWidget(widget_n);
 
         pushButton = new QPushButton(Dialog);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
         verticalLayout->addWidget(pushButton);
+
+        widget = new MyCustomPlot(Dialog);
+        widget->setObjectName(QStringLiteral("widget"));
+
+        verticalLayout->addWidget(widget);
 
 
         retranslateUi(Dialog);

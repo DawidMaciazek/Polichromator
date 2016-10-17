@@ -23,6 +23,11 @@ Dialog::~Dialog()
     delete ui;
 }
 
+void Dialog::mousePressEvent(QMouseEvent *event)
+{
+    qDebug() << "pressed widgett";
+}
+
 void Dialog::on_pushButton_clicked()
 {
     // -----------------

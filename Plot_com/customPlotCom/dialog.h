@@ -15,6 +15,9 @@ public:
     explicit Dialog(QWidget *parent = 0);
     ~Dialog();
 
+protected:
+    void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+
 private slots:
     void on_pushButton_clicked();
 
