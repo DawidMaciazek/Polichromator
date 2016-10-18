@@ -27,7 +27,8 @@ SOURCES += main.cpp\
     spectrumeditorcustomdelta.cpp \
     spectrumeditorcustomgaussian.cpp \
     spectrumeditorcustomitem.cpp \
-    tinyexpr.c
+    tinyexpr.c \
+    functionsequencewidget.cpp
 
 HEADERS  += mainwindow.h \
     functionlibrary.h \
@@ -43,7 +44,8 @@ HEADERS  += mainwindow.h \
     spectrumeditorcustomdelta.h \
     spectrumeditorcustomgaussian.h \
     spectrumeditorcustomitem.h \
-    tinyexpr.h
+    tinyexpr.h \
+    functionsequencewidget.h
 
 FORMS    += mainwindow.ui \
     functionlibrary.ui \
@@ -54,4 +56,5 @@ FORMS    += mainwindow.ui \
     spectrumeditorcustomcfunction.ui \
     spectrumeditorcustomdelta.ui \
     spectrumeditorcustomgaussian.ui \
-    spectrumeditorcustomitem.ui
+    spectrumeditorcustomitem.ui \
+    functionsequencewidget.ui

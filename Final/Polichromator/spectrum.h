@@ -2,6 +2,8 @@
 #define SPECTRUM_H
 
 #include <QVector>
+#include <QDataStream>
+
 #include "expparser.h"
 
 class Spectrum
@@ -18,7 +20,9 @@ public:
     Spectrum &operator *=( const Spectrum spec);// addition assigment
     Spectrum(const Spectrum& spec); // Copy constructor
 
-    //	R K::operator +(S b);
+    friend QDataStream &operator <<( QDataStream& stream, const Spectrum& spectrum);
+    friend QDataStream &operator >>( QDataStream& stream, Spectrum& spectrum);
+
     ~Spectrum();
 
     bool valid;

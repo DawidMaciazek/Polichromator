@@ -5,7 +5,8 @@
 
 #include <tgmath.h>
 
-Spectrum::Spectrum()
+Spectrum::Spectrum():
+    valid(false)
 {
 }
 
@@ -107,6 +108,22 @@ Spectrum::Spectrum(const Spectrum &spec)
 
     x = spec.x;
     y = spec.y;
+}
+
+QDataStream &operator >>(QDataStream &stream, Spectrum &spectrum)
+{
+    spectrum = Spectrum();
+
+    stream >> spectrum.valid >> spectrum.start >> spectrum.stop
+            >> spectrum.step >> spectrum.size
+            >> spectrum.x >> spectrum.y;
+}
+
+QDataStream &operator <<(QDataStream &stream, const Spectrum &spectrum)
+{
+    return stream << spectrum.valid << spectrum.start << spectrum.stop
+                  << spectrum.step << spectrum.size
+                  << spectrum.x << spectrum.y;
 }
 
 

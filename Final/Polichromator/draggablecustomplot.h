@@ -4,6 +4,7 @@
 #include <QDrag>
 
 #include "qcustomplot.h"
+#include "spectrum.h"
 
 class DraggableCustomPlot : public QCustomPlot
 {
@@ -16,6 +17,9 @@ public:
 protected:
     void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
     void mouseReleaseEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
+
+private:
+    Spectrum spectrum;
 };
 
 #endif // DRAGGABLECUSTOMPLOT_H
