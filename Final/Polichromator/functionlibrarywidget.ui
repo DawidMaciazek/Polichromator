@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>FunctionLibraryItem</class>
- <widget class="QWidget" name="FunctionLibraryItem">
+ <class>FunctionLibraryWidget</class>
+ <widget class="QWidget" name="FunctionLibraryWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>728</width>
-    <height>315</height>
+    <width>563</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,21 +15,21 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="DraggableCustomPlot" name="widget" native="true"/>
+    <widget class="DraggableCustomPlot" name="plot" native="true"/>
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QLabel" name="labelName">
        <property name="text">
-        <string>PushButton</string>
+        <string>Name</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="buttonEdit">
        <property name="text">
-        <string>PushButton</string>
+        <string>Edit</string>
        </property>
       </widget>
      </item>

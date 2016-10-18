@@ -16,18 +16,42 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     functionlibrary.cpp \
     functionsequence.cpp \
-    functionlibraryitem.cpp \
     qcustomplot.cpp \
-    draggablecustomplot.cpp
+    draggablecustomplot.cpp \
+    functionlibrarywidget.cpp \
+    expparser.cpp \
+    spectrum.cpp \
+    spectrumeditor.cpp \
+    spectrumeditorcustom.cpp \
+    spectrumeditorcustomcfunction.cpp \
+    spectrumeditorcustomdelta.cpp \
+    spectrumeditorcustomgaussian.cpp \
+    spectrumeditorcustomitem.cpp \
+    tinyexpr.c
 
 HEADERS  += mainwindow.h \
     functionlibrary.h \
     functionsequence.h \
-    functionlibraryitem.h \
     qcustomplot.h \
-    draggablecustomplot.h
+    draggablecustomplot.h \
+    functionlibrarywidget.h \
+    expparser.h \
+    spectrum.h \
+    spectrumeditor.h \
+    spectrumeditorcustom.h \
+    spectrumeditorcustomcfunction.h \
+    spectrumeditorcustomdelta.h \
+    spectrumeditorcustomgaussian.h \
+    spectrumeditorcustomitem.h \
+    tinyexpr.h
 
 FORMS    += mainwindow.ui \
     functionlibrary.ui \
     functionsequence.ui \
-    functionlibraryitem.ui
+    functionlibrarywidget.ui \
+    spectrumeditor.ui \
+    spectrumeditorcustom.ui \
+    spectrumeditorcustomcfunction.ui \
+    spectrumeditorcustomdelta.ui \
+    spectrumeditorcustomgaussian.ui \
+    spectrumeditorcustomitem.ui
