@@ -36,11 +36,15 @@ public:
     {
         if (FunctionLibraryWidget->objectName().isEmpty())
             FunctionLibraryWidget->setObjectName(QStringLiteral("FunctionLibraryWidget"));
-        FunctionLibraryWidget->resize(563, 300);
+        FunctionLibraryWidget->resize(306, 300);
+        FunctionLibraryWidget->setMinimumSize(QSize(200, 200));
+        FunctionLibraryWidget->setMaximumSize(QSize(306, 300));
         horizontalLayout = new QHBoxLayout(FunctionLibraryWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         plot = new DraggableCustomPlot(FunctionLibraryWidget);
         plot->setObjectName(QStringLiteral("plot"));
+        plot->setMinimumSize(QSize(200, 200));
+        plot->setMaximumSize(QSize(300, 300));
 
         horizontalLayout->addWidget(plot);
 

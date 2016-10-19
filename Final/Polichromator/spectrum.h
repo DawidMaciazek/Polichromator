@@ -28,8 +28,8 @@ public:
     bool valid;
     double start;
     double stop;
-    double step;
     int size;
+    double step;
 
     QVector<double> x;
     QVector<double> y;

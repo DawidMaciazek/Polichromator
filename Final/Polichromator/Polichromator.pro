@@ -21,7 +21,6 @@ SOURCES += main.cpp\
     functionlibrarywidget.cpp \
     expparser.cpp \
     spectrum.cpp \
-    spectrumeditor.cpp \
     spectrumeditorcustom.cpp \
     spectrumeditorcustomcfunction.cpp \
     spectrumeditorcustomdelta.cpp \
@@ -38,7 +37,6 @@ HEADERS  += mainwindow.h \
     functionlibrarywidget.h \
     expparser.h \
     spectrum.h \
-    spectrumeditor.h \
     spectrumeditorcustom.h \
     spectrumeditorcustomcfunction.h \
     spectrumeditorcustomdelta.h \
@@ -51,7 +49,6 @@ FORMS    += mainwindow.ui \
     functionlibrary.ui \
     functionsequence.ui \
     functionlibrarywidget.ui \
-    spectrumeditor.ui \
     spectrumeditorcustom.ui \
     spectrumeditorcustomcfunction.ui \
     spectrumeditorcustomdelta.ui \

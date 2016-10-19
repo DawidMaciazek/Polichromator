@@ -43,6 +43,7 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         plot = new DraggableCustomPlot(FunctionSequenceWidget);
         plot->setObjectName(QStringLiteral("plot"));
+        plot->setMinimumSize(QSize(300, 300));
 
         horizontalLayout->addWidget(plot);
 

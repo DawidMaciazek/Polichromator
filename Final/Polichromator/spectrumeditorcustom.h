@@ -1,7 +1,7 @@
 #ifndef SPECTRUMEDITORCUSTOM_H
 #define SPECTRUMEDITORCUSTOM_H
 
-#include <QWidget>
+#include <QDialog>
 
 #include "spectrum.h"
 #include "spectrumeditorcustomitem.h"
@@ -11,7 +11,7 @@ namespace Ui {
 class SpectrumEditorCustom;
 }
 
-class SpectrumEditorCustom : public QWidget
+class SpectrumEditorCustom : public QDialog
 {
     Q_OBJECT
 
@@ -19,8 +19,11 @@ public:
     explicit SpectrumEditorCustom(Spectrum templateSpectrum, QWidget *parent = 0);
     ~SpectrumEditorCustom();
 
+    Spectrum getSpectrum();
+
     void initializePlot();
     void updatePlot();
+
     Spectrum combinedSpectrum;
 
 private slots:

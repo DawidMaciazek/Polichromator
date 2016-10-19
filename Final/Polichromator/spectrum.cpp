@@ -56,7 +56,6 @@ Spectrum::Spectrum(ExpParser *parser, Spectrum &parent):
 
 Spectrum &Spectrum::envelope(const Spectrum spec)
 {
-    qDebug() << "envelope OPERATOR";
     for(int i=0; i<size; i++)
     {
         y[i] = std::max(y.at(i), spec.y.at(i));
@@ -66,7 +65,6 @@ Spectrum &Spectrum::envelope(const Spectrum spec)
 
 Spectrum &Spectrum::operator =(const Spectrum &spec)
 {
-    qDebug() << "= OPERATOR!"    ;
     valid = spec.valid;
     start = spec.start;
     stop = spec.stop;
@@ -80,7 +78,6 @@ Spectrum &Spectrum::operator =(const Spectrum &spec)
 
 Spectrum &Spectrum::operator +=(const Spectrum spec)
 {
-    qDebug() << "+= OPERATOR!";
     valid = (spec.valid && valid);
     for(int i=0; i<size; i++)
         y[i] = y.at(i) + spec.y.at(i);
@@ -89,7 +86,6 @@ Spectrum &Spectrum::operator +=(const Spectrum spec)
 
 Spectrum &Spectrum::operator *=(const Spectrum spec)
 {
-    qDebug() << "+= OPERATOR!";
     valid = (spec.valid && valid);
     for(int i=0; i<size; i++)
         y[i] = y.at(i) * spec.y.at(i);
@@ -99,7 +95,6 @@ Spectrum &Spectrum::operator *=(const Spectrum spec)
 
 Spectrum::Spectrum(const Spectrum &spec)
 {
-    qDebug() << "copy CONSTRUCTOR";
     valid = spec.valid;
     start = spec.start;
     stop = spec.stop;
@@ -113,17 +108,20 @@ Spectrum::Spectrum(const Spectrum &spec)
 QDataStream &operator >>(QDataStream &stream, Spectrum &spectrum)
 {
     spectrum = Spectrum();
-
     stream >> spectrum.valid >> spectrum.start >> spectrum.stop
             >> spectrum.step >> spectrum.size
             >> spectrum.x >> spectrum.y;
+
+    qDebug() <<  " spectrum >> ";
 }
 
 QDataStream &operator <<(QDataStream &stream, const Spectrum &spectrum)
 {
+    qDebug() << " spectrum << ";
     return stream << spectrum.valid << spectrum.start << spectrum.stop
                   << spectrum.step << spectrum.size
                   << spectrum.x << spectrum.y;
+
 }
 
 

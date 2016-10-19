@@ -9,10 +9,12 @@
 class DraggableCustomPlot : public QCustomPlot
 {
 public:
-    DraggableCustomPlot(QWidget *parent);
+    DraggableCustomPlot(QWidget *parent, bool draggable=true);
     ~DraggableCustomPlot();
 
      static QString dragMimeType() { return QStringLiteral("draggablecustomplot/spectrum") ;};
+
+     void setSpectrum(Spectrum spec);
 
 protected:
     void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
@@ -20,6 +22,7 @@ protected:
 
 private:
     Spectrum spectrum;
+    bool draggable;
 };
 
 #endif // DRAGGABLECUSTOMPLOT_H

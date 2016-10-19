@@ -6,12 +6,11 @@
 #include <QDebug>
 
 SpectrumEditorCustom::SpectrumEditorCustom(Spectrum templateSpectrum, QWidget *parent) :
-    QWidget(parent),
+    QDialog(parent),
     ui(new Ui::SpectrumEditorCustom),
     templateSpectrum(templateSpectrum),
     combinedSpectrum(templateSpectrum)
 {
-    qDebug() << "SpectrumEditorCustom" ;
     ui->setupUi(this);
 
     initializePlot();
@@ -28,6 +27,11 @@ SpectrumEditorCustom::~SpectrumEditorCustom()
     foreach (SpectrumEditorCustomItem *item, itemList)
         item->deleteLater();
     delete ui;
+}
+
+Spectrum SpectrumEditorCustom::getSpectrum()
+{
+    return combinedSpectrum;
 }
 
 void SpectrumEditorCustom::initializePlot()
@@ -84,7 +88,6 @@ void SpectrumEditorCustom::updatePlot()
 void SpectrumEditorCustom::on_buttonAddFunction_clicked()
 {
     SpectrumEditorCustomItem *specItem = new SpectrumEditorCustomItem(templateSpectrum, this);
-    // deleted in SpectrumEditorCustom::deleteItem() on demand
 
     ui->verticalLayoutFunctions->addWidget(specItem);
 
@@ -106,18 +109,15 @@ void SpectrumEditorCustom::deleteItemSlot(SpectrumEditorCustomItem *item)
             break;
         }
     }
-    qDebug() << "NOW deletion request !";
     updatePlot();
 }
 
 void SpectrumEditorCustom::updatePlotSlot()
 {
-    qDebug() << "plot update request catched...";
     updatePlot();
 }
 
 void SpectrumEditorCustom::on_comboMerge_currentIndexChanged(int index)
 {
-    qDebug() << "current CHANGEDDD";
     updatePlot();
 }

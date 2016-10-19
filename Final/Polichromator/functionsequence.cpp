@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QDragEnterEvent>
 
+#include "draggablecustomplot.h"
 #include "spectrum.h"
 #include "functionsequencewidget.h"
 
@@ -22,12 +23,27 @@ FunctionSequence::~FunctionSequence()
 
 void FunctionSequence::dragEnterEvent(QDragEnterEvent *event)
 {
-    event->setAccepted(true);
+    if(event->mimeData()->hasFormat(DraggableCustomPlot::dragMimeType()))
+    {
+        event->setAccepted(true);
+    }
+    else
+    {
+        event->ignore();
+    }
 }
 
 void FunctionSequence::dropEvent(QDropEvent *event)
 {
-    qDebug() << event->source();
+    if(event->mimeData()->hasFormat(DraggableCustomPlot::dragMimeType()))
+    {
+        event->setAccepted(true);
+    }
+    else
+    {
+        event->ignore();
+        return;
+    }
 
     int scrollPos = 0;
     if(this->verticalScrollBar()->value())
@@ -69,14 +85,27 @@ void FunctionSequence::dropEvent(QDropEvent *event)
 
     if(continueSearch)
     {
-        dropIndex = widgetCnt - 1;
+        if(dropWidget == NULL)
+        {
+            dropIndex = widgetCnt;
+        }
+        else
+        {
+            dropIndex = widgetCnt - 1;
+        }
+
     }
 
     if(dropWidget == NULL)
     {
-        qDebug() << "Outside widget !";
-        dropWidget = new FunctionSequenceWidget(this);
-        layoutWidgets.insert(0, dropWidget);
+        QByteArray itemData = event->mimeData()->data(DraggableCustomPlot::dragMimeType());
+        QDataStream dataStream(&itemData, QIODevice::ReadOnly);
+
+        Spectrum spectrum;
+        dataStream >> spectrum;
+
+        dropWidget = new FunctionSequenceWidget(this, spectrum);
+        layoutWidgets.insert(dropIndex, dropWidget);
         ui->verticalLayout->addWidget(dropWidget);
     }
     else
@@ -93,6 +122,4 @@ void FunctionSequence::dropEvent(QDropEvent *event)
     {
         ui->verticalLayout->addWidget(layoutWidgets[i]);
     }
-
-
 }
