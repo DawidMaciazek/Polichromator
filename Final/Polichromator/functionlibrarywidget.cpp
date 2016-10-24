@@ -4,11 +4,18 @@
 #include "spectrum.h"
 #include "spectrumeditorcustom.h"
 
-FunctionLibraryWidget::FunctionLibraryWidget(QWidget *parent) :
+#include <QMessageBox>
+
+FunctionLibraryWidget::FunctionLibraryWidget(Spectrum templateSpectrum, QString name, QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::FunctionLibraryWidget)
+    ui(new Ui::FunctionLibraryWidget),
+    name(name)
 {
     ui->setupUi(this);
+    spectrum = templateSpectrum;
+    ui->plot->setSpectrum(spectrum);
+    ui->plot->setName(name);
+    ui->labelName->setText(name);
 }
 
 FunctionLibraryWidget::~FunctionLibraryWidget()
@@ -18,15 +25,19 @@ FunctionLibraryWidget::~FunctionLibraryWidget()
 
 void FunctionLibraryWidget::on_buttonEdit_clicked()
 {
-    //SpectrumEditor *spec = new SpectrumEditor(this);
-    SpectrumEditorCustom *spec = new SpectrumEditorCustom(Spectrum(0,20,1), this);
-    spec->exec();
-    Spectrum sp = spec->getSpectrum();
-    qDebug() << sp.x;
+    SpectrumEditorCustom *spectrumEditor = new SpectrumEditorCustom(spectrum, this);
+    spectrumEditor->exec();
+    Spectrum spectrum = spectrumEditor->getSpectrum();
 
-    ui->plot->setSpectrum(sp);
-    ui->plot->addGraph();
-    ui->plot->xAxis->setRange(sp.x[0], sp.x[sp.size-1]);
-    ui->plot->graph(0)->setData(sp.x, sp.y);
-    ui->plot->replot();
+    ui->plot->setSpectrum(spectrum);
+}
+
+void FunctionLibraryWidget::on_deleteButton_clicked()
+{
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Delete function", "Do you really want to delete this function from library?",
+                                  QMessageBox::Yes|QMessageBox::No);
+
+    if (reply == QMessageBox::Yes)
+        this->deleteLater();
 }

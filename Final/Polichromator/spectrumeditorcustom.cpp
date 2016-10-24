@@ -37,6 +37,7 @@ Spectrum SpectrumEditorCustom::getSpectrum()
 void SpectrumEditorCustom::initializePlot()
 {
     ui->plot->xAxis->setRange(templateSpectrum.start, templateSpectrum.stop);
+    ui->plot->yAxis->setRange(0, 1.3);
 }
 
 void SpectrumEditorCustom::updatePlot()

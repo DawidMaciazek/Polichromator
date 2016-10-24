@@ -6,6 +6,7 @@ FunctionSequenceWidget::FunctionSequenceWidget(QWidget *parent) :
     ui(new Ui::FunctionSequenceWidget)
 {
     ui->setupUi(this);
+    name = "";
 }
 
 FunctionSequenceWidget::FunctionSequenceWidget(QWidget *parent, Spectrum spectrum) :
@@ -15,7 +16,7 @@ FunctionSequenceWidget::FunctionSequenceWidget(QWidget *parent, Spectrum spectru
 {
     ui->setupUi(this);
 
-    qDebug() << "function seq";
+    name = "";
 
     ui->plot->addGraph();
     ui->plot->xAxis->setRange(spectrum.start, spectrum.stop);
@@ -30,4 +31,11 @@ FunctionSequenceWidget::~FunctionSequenceWidget()
 const DraggableCustomPlot *FunctionSequenceWidget::getPlot()
 {
     return ui->plot;
+}
+
+void FunctionSequenceWidget::setName(QString newName)
+{
+    qDebug() << "seting name" << newName  << "   Ols:" << name;
+    name = newName;
+    ui->labelName->setText(name);
 }

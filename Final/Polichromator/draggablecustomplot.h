@@ -15,6 +15,7 @@ public:
      static QString dragMimeType() { return QStringLiteral("draggablecustomplot/spectrum") ;};
 
      void setSpectrum(Spectrum spec);
+     void setName(QString newName);
 
 protected:
     void mousePressEvent(QMouseEvent *event) Q_DECL_OVERRIDE;
@@ -22,6 +23,7 @@ protected:
 
 private:
     Spectrum spectrum;
+    QString name;
     bool draggable;
 };
 

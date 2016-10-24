@@ -22,9 +22,15 @@ public:
 
     const DraggableCustomPlot *getPlot();
 
+    void setName(QString newName);
+
+private slots:
+    void on_buttonDelete_clicked();
+
 private:
     Ui::FunctionSequenceWidget *ui;
     Spectrum spectrum;
+    QString name;
 };
 
 #endif // FUNCTIONSEQUENCEWIDGET_H

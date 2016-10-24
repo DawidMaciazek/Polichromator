@@ -98,13 +98,19 @@ void FunctionSequence::dropEvent(QDropEvent *event)
 
     if(dropWidget == NULL)
     {
+        qDebug() << "strill ste";
         QByteArray itemData = event->mimeData()->data(DraggableCustomPlot::dragMimeType());
         QDataStream dataStream(&itemData, QIODevice::ReadOnly);
 
         Spectrum spectrum;
-        dataStream >> spectrum;
+        QString newName;
+        dataStream >> spectrum ;
+        dataStream >> newName;
 
+        qDebug() << "FROM STREAM NAME" << newName;
         dropWidget = new FunctionSequenceWidget(this, spectrum);
+        dropWidget->setName(newName);
+
         layoutWidgets.insert(dropIndex, dropWidget);
         ui->verticalLayout->addWidget(dropWidget);
     }

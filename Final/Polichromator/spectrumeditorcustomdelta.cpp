@@ -56,7 +56,5 @@ void SpectrumEditorCustomDelta::validateInput()
                 ui->lineWidth->text());
 
     ExpParser *parser = new ExpParser(expression);
-    qDebug() << expression;
-    qDebug() << "ERRROR AT ! : " << parser->getError();
     emit functionUpdateRequest(parser);
 }

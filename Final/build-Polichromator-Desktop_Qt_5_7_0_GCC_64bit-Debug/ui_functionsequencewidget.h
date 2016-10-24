@@ -30,15 +30,16 @@ public:
     QHBoxLayout *horizontalLayout;
     DraggableCustomPlot *plot;
     QGridLayout *gridLayout;
-    QLabel *label;
+    QLabel *labelName;
     QLineEdit *lineEdit;
+    QLabel *label;
     QPushButton *pushButton;
 
     void setupUi(QWidget *FunctionSequenceWidget)
     {
         if (FunctionSequenceWidget->objectName().isEmpty())
             FunctionSequenceWidget->setObjectName(QStringLiteral("FunctionSequenceWidget"));
-        FunctionSequenceWidget->resize(577, 303);
+        FunctionSequenceWidget->resize(577, 318);
         horizontalLayout = new QHBoxLayout(FunctionSequenceWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         plot = new DraggableCustomPlot(FunctionSequenceWidget);
@@ -49,24 +50,31 @@ public:
 
         gridLayout = new QGridLayout();
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
-        label = new QLabel(FunctionSequenceWidget);
-        label->setObjectName(QStringLiteral("label"));
+        labelName = new QLabel(FunctionSequenceWidget);
+        labelName->setObjectName(QStringLiteral("labelName"));
 
-        gridLayout->addWidget(label, 0, 0, 1, 1);
+        gridLayout->addWidget(labelName, 0, 0, 1, 2);
 
         lineEdit = new QLineEdit(FunctionSequenceWidget);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
 
-        gridLayout->addWidget(lineEdit, 0, 1, 1, 1);
+        gridLayout->addWidget(lineEdit, 1, 1, 1, 1);
+
+        label = new QLabel(FunctionSequenceWidget);
+        label->setObjectName(QStringLiteral("label"));
+
+        gridLayout->addWidget(label, 1, 0, 1, 1);
 
         pushButton = new QPushButton(FunctionSequenceWidget);
         pushButton->setObjectName(QStringLiteral("pushButton"));
 
-        gridLayout->addWidget(pushButton, 1, 1, 1, 1);
+        gridLayout->addWidget(pushButton, 2, 1, 1, 1);
 
 
         horizontalLayout->addLayout(gridLayout);
 
+        plot->raise();
+        labelName->raise();
 
         retranslateUi(FunctionSequenceWidget);
 
@@ -76,6 +84,7 @@ public:
     void retranslateUi(QWidget *FunctionSequenceWidget)
     {
         FunctionSequenceWidget->setWindowTitle(QApplication::translate("FunctionSequenceWidget", "Form", 0));
+        labelName->setText(QApplication::translate("FunctionSequenceWidget", "Name - Label", 0));
         label->setText(QApplication::translate("FunctionSequenceWidget", "TextLabel", 0));
         pushButton->setText(QApplication::translate("FunctionSequenceWidget", "PushButton", 0));
     } // retranslateUi

@@ -745,16 +745,20 @@ moc_mainwindow.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
 		../Polichromator/mainwindow.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/Final/Polichromator -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtPrintSupport -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Polichromator/mainwindow.h -o moc_mainwindow.cpp
 
-moc_functionlibrary.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+moc_functionlibrary.cpp: ../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qglobal.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qconfig.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
@@ -777,48 +781,56 @@ moc_functionlibrary.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmutex.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qpair.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qregexp.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmargins.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrect.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpalette.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qcolor.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgb.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qline.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtransform.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
@@ -1527,6 +1539,12 @@ moc_functionlibrarywidget.cpp: ../../../../Qt/5.7/gcc_64/include/QtWidgets/QWidg
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../Polichromator/expparser.h \
+		../Polichromator/tinyexpr.h \
 		../Polichromator/functionlibrarywidget.h \
 		../../../../Qt/5.7/gcc_64/bin/moc
 	/home/dawid/Qt/5.7/gcc_64/bin/moc $(DEFINES) -I/home/dawid/Qt/5.7/gcc_64/mkspecs/linux-g++ -I/home/dawid/pro/Polichromator/Final/Polichromator -I/home/dawid/Qt/5.7/gcc_64/include -I/home/dawid/Qt/5.7/gcc_64/include/QtPrintSupport -I/home/dawid/Qt/5.7/gcc_64/include/QtWidgets -I/home/dawid/Qt/5.7/gcc_64/include/QtGui -I/home/dawid/Qt/5.7/gcc_64/include/QtCore -I. -I/usr/include/c++/4.8 -I/usr/include/x86_64-linux-gnu/c++/4.8 -I/usr/include/c++/4.8/backward -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/4.8/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Polichromator/functionlibrarywidget.h -o moc_functionlibrarywidget.cpp
@@ -2649,12 +2667,10 @@ ui_mainwindow.h: ../Polichromator/mainwindow.ui \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qglobal.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qconfig.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
@@ -2677,48 +2693,56 @@ ui_mainwindow.h: ../Polichromator/mainwindow.ui \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmutex.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qpair.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qregexp.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmargins.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrect.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpalette.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qcolor.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgb.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qline.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtransform.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
@@ -4320,6 +4344,12 @@ main.o: ../Polichromator/main.cpp ../Polichromator/mainwindow.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QApplication \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qapplication.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreapplication.h \
@@ -4430,6 +4460,12 @@ mainwindow.o: ../Polichromator/mainwindow.cpp ../Polichromator/mainwindow.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qicon.h \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
 		ui_mainwindow.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -4466,9 +4502,12 @@ mainwindow.o: ../Polichromator/mainwindow.cpp ../Polichromator/mainwindow.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qstyle.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtabbar.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qlabel.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QMenu \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qmenu.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QMenuBar \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qmenubar.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qmenu.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QStatusBar \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qstatusbar.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QToolBar \
@@ -4477,16 +4516,23 @@ mainwindow.o: ../Polichromator/mainwindow.cpp ../Polichromator/mainwindow.h \
 		../Polichromator/functionlibrary.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
-		../Polichromator/functionsequence.h
+		../Polichromator/functionsequence.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDebug \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QInputDialog \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qinputdialog.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qdialog.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qlineedit.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qtextcursor.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qtextformat.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qpen.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qtextoption.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../Polichromator/mainwindow.cpp
 
 functionlibrary.o: ../Polichromator/functionlibrary.cpp ../Polichromator/functionlibrary.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qglobal.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qconfig.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfeatures.h \
@@ -4509,48 +4555,56 @@ functionlibrary.o: ../Polichromator/functionlibrary.cpp ../Polichromator/functio
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmutex.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qnumeric.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qversiontagging.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
-		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrefcount.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qarraydata.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qlist.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qalgorithms.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiterator.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qhashfunctions.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qchar.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qpair.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearraylist.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qbytearray.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qnamespace.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstring.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qstringbuilder.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringlist.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qregexp.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qstringmatcher.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qscopedpointer.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobject.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qobjectdefs_impl.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/qcoreevent.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmetatype.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qvarlengtharray.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qcontainerfwd.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qobject_impl.h \
+		../Polichromator/expparser.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/tinyexpr.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QScrollArea \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qwidget.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs.h \
+		../../../../Qt/5.7/gcc_64/include/QtGui/qwindowdefs_win.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qmargins.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpaintdevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qrect.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qsize.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qpoint.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpalette.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qcolor.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgb.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qrgba64.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qbrush.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qvector.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qmatrix.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpolygon.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qregion.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qdatastream.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/qiodevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qline.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtransform.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qpainterpath.h \
@@ -6157,6 +6211,12 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
+		../Polichromator/spectrum.h \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
+		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
+		../Polichromator/expparser.h \
+		../Polichromator/tinyexpr.h \
 		ui_functionlibrarywidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QVariant \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QAction \
@@ -6172,11 +6232,12 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtGui/qinputmethod.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QButtonGroup \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qbuttongroup.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QHBoxLayout \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qboxlayout.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QGridLayout \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qgridlayout.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qlayout.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qlayoutitem.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qgridlayout.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qboxlayout.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QHBoxLayout \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QHeaderView \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qheaderview.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -6200,7 +6261,8 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QPushButton \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qpushbutton.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qabstractbutton.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/QVBoxLayout \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QToolButton \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtoolbutton.h \
 		../Polichromator/draggablecustomplot.h \
 		../../../../Qt/5.7/gcc_64/include/QtGui/QDrag \
 		../../../../Qt/5.7/gcc_64/include/QtGui/qdrag.h \
@@ -6215,8 +6277,6 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtGui/QPaintEvent \
 		../../../../Qt/5.7/gcc_64/include/QtGui/QMouseEvent \
 		../../../../Qt/5.7/gcc_64/include/QtGui/QPixmap \
-		../../../../Qt/5.7/gcc_64/include/QtCore/QVector \
-		../../../../Qt/5.7/gcc_64/include/QtCore/QString \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QDateTime \
 		../../../../Qt/5.7/gcc_64/include/QtCore/qdatetime.h \
 		../../../../Qt/5.7/gcc_64/include/QtCore/QMultiMap \
@@ -6531,7 +6591,6 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtextbrowser.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtoolbar.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtoolbox.h \
-		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtoolbutton.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/qtwidgetsversion.h \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qabstractprintdialog.h \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qpagesetupdialog.h \
@@ -6541,13 +6600,10 @@ functionlibrarywidget.o: ../Polichromator/functionlibrarywidget.cpp ../Polichrom
 		../../../../Qt/5.7/gcc_64/include/QtCore/QPair \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qprintpreviewwidget.h \
 		../../../../Qt/5.7/gcc_64/include/QtPrintSupport/qtprintsupportversion.h \
-		../Polichromator/spectrum.h \
-		../../../../Qt/5.7/gcc_64/include/QtCore/QDataStream \
-		../Polichromator/expparser.h \
-		../Polichromator/tinyexpr.h \
 		../Polichromator/spectrumeditorcustom.h \
 		../../../../Qt/5.7/gcc_64/include/QtWidgets/QDialog \
-		../Polichromator/spectrumeditorcustomitem.h
+		../Polichromator/spectrumeditorcustomitem.h \
+		../../../../Qt/5.7/gcc_64/include/QtWidgets/QMessageBox
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o functionlibrarywidget.o ../Polichromator/functionlibrarywidget.cpp
 
 expparser.o: ../Polichromator/expparser.cpp ../Polichromator/expparser.h \
